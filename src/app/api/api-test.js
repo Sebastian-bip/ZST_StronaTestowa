@@ -8,7 +8,7 @@ const client = createClient({
 
 export const POST = async () => {
   // Fetch data from SQLite
-  const result = await client.execute("CREATE TABLE todos (description);");
+  //const result = await client.execute("CREATE TABLE todos (description);");
 };
 
 //tokens:
