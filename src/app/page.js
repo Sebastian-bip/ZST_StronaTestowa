@@ -4,7 +4,7 @@ import "./page.css"
 export default function Home() {
   return (
     <div className="mainBlock">
-        test3
+        Strona główna
     </div>
   );
 }
