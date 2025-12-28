@@ -7,7 +7,8 @@ export const metadata = {
 export default function NotFound() {
     return(
         <div>
-            404
+            <h1>404</h1>
+            <p>Page: <b></b> does not exists!!!</p>
             <Link href="/">/</Link>
         </div>
     )
