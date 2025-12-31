@@ -1,7 +1,6 @@
 export default async function DbTest() {
-  const res = await fetch("http://localhost:3000/api/data", {
-    cache: "no-store",
-  });
+  //const res = await fetch("http://localhost:3000/api/data", {
+  const res = await fetch("/api/users");
 
   const data = await res.json();
   // ten div w returnie nie obrazi się na styl xD
