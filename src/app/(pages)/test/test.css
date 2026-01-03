@@ -1,0 +1,27 @@
+::selection, ::-moz-selection {
+    background: #00fff233;
+    color: rgb(247, 118, 118);
+    text-shadow: none;
+}
+
+.test-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-100);
+}
+
+.test-content{
+    font-size: 96px;
+    font-weight: 400;
+    padding: 16px;
+    border-radius: 8px;
+    font-family: system-ui;
+
+    border: 2px rgba(255, 0, 0, 0.113) solid;
+
+
+
+}
