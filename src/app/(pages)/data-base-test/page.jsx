@@ -2,6 +2,10 @@ export const dynamic = "force-dynamic";
 import { getLatestArticleTitles } from "@/app/api/lib/articles";
 import Link from "next/link";
 
+export const metadata = {
+    title: "db tests"
+}
+
 export default async function DbTest() {
   try {
     const articles = await getLatestArticleTitles(4);
