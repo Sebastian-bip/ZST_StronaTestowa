@@ -10,7 +10,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--primary-100);
+    background-color: var(--yellow-100);
+
 }
 
 .test-content{
@@ -21,7 +22,8 @@
     font-family: system-ui;
 
     border: 2px rgba(255, 0, 0, 0.113) solid;
-
+    border-color: transparent;
+    background-color: white;
 
 
 }

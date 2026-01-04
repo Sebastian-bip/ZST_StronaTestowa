@@ -3,6 +3,7 @@ import "./globals.css";
 
 import "./temp.css"
 import "./temp2.css"
+import { Providers } from "@/_lib/Providers";
 
 
 const geistSans = Geist({
@@ -29,11 +30,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased visual-refresh theme-dark`}
+            {/* 
+         Dodajemy suppressHydrationWarning do <html>, 
+         ponieważ nasz skrypt będzie zmieniał klasy/atrybuty 
+         zaraz po załadowaniu strony.
+      */}
+      <body suppressHydrationWarning
+
+        className={`${geistSans.variable} ${geistMono.variable} antialiased 
+        visual-refresh
+        `}
+
         style={{"--custom-theme-base-color-amount": "100%"}}
       >
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   );
