@@ -84,7 +84,7 @@
 }
 
 /* tło ciepłe/ sandpaper style */
-.sandpaper{
+.sandpaper-colors{
 --primary-100: hsl(var(--primary-100-hsl) / 1);
 --primary-100-hsl: 42 calc(var(--saturation-factor, 1) * 5%) 96.8%;
 

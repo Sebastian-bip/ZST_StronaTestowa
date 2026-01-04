@@ -3,6 +3,7 @@ import "./globals.css";
 
 import "./temp.css"
 import "./temp2.css"
+import "./final.css";
 import { Providers } from "@/_lib/Providers";
 
 
@@ -34,11 +35,14 @@ export default function RootLayout({ children }) {
          Dodajemy suppressHydrationWarning do <html>, 
          ponieważ nasz skrypt będzie zmieniał klasy/atrybuty 
          zaraz po załadowaniu strony.
+
+
+         visual-refresh
       */}
       <body suppressHydrationWarning
 
         className={`${geistSans.variable} ${geistMono.variable} antialiased 
-        visual-refresh
+        
         `}
 
         style={{"--custom-theme-base-color-amount": "100%"}}

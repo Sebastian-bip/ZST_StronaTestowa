@@ -49,7 +49,7 @@ export const SettingsProvider = ({ children }) => {
         setIsLoaded(true)
     }, []);
 
-    // aktualizacja danych + w localstorage
+    // aktualizacja danych
     const updateSettings = (key, value) => {
         setSettings((prev) => ({
             ...prev,
@@ -57,6 +57,7 @@ export const SettingsProvider = ({ children }) => {
         }));
     };
 
+    // aktualizacja w localstorage
     useEffect(() => {
         if (!isLoaded) return;
 
@@ -93,6 +94,8 @@ export const SettingsProvider = ({ children }) => {
         //saturacja
         if (settings.saturationModifier != 1){
             root.style.setProperty("--saturation-factor", `${settings.saturationModifier}`)
+        }else{
+            root.style.removeProperty("--saturation-factor")
         }
         
         // to do >> reduce motion oraz blur

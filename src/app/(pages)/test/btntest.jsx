@@ -15,6 +15,30 @@ export default function ButtonTest({ children }) {
         }}>
             light
         </button>
+        <div>
+            <button onClick={() => {
+                updateSettings("saturationModifier", 0)
+            }}>
+                saturacja 0
+            </button>
+                    <button onClick={() => {
+                updateSettings("saturationModifier", 1)
+            }}>
+                saturacja 1
+            </button>
+        </div>
+        <div>
+            <button onClick={() => {
+                updateSettings("isSandpaperMode", true)
+            }}>
+                sandpaper on
+            </button>
+                    <button onClick={() => {
+                updateSettings("isSandpaperMode", false)
+            }}>
+                sandpaper off
+            </button>
+        </div>
         </>
     )
 }
