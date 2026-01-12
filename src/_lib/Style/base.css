@@ -1,0 +1,41 @@
+.theme-dark{
+
+
+
+/*   -----   tła   -----   */
+    --background-surface-highest: var(--primary-630);
+    --background-surface-higher: var(--primary-660);
+    --background-surface-high: var(--primary-700);
+
+
+    --background-base-low: var(--primary-730);
+    --background-base-lower: var(--primary-760);
+    --background-base-lowest: var(--primary-800);
+
+    --background-page-primary: var(--primary-860);
+    --background-page-primary-alt: var(--primary-900);
+    --background-page-secondary: var(--primary-830);
+    --background-page-secondary-alt: var(--primary-800);
+
+}
+
+.theme-light{
+
+
+
+/*   -----   tła   -----   */
+    --background-surface-highest: var(--neutral-60);
+    --background-surface-higher: var(--neutral-62);
+    --background-surface-high: var(--neutral-64);
+
+
+    --background-base-low: var(--neutral-66);
+    --background-base-lower: var(--neutral-69);
+    --background-base-lowest: var(--neutral-73);
+
+    --background-page-primary: var(--primary-130);
+    --background-page-primary-alt: var(--primary-100);
+    --background-page-secondary: var(--primary-160);
+    --background-page-secondary-alt: var(--primary-200);
+
+}

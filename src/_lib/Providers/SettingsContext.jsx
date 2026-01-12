@@ -1,7 +1,5 @@
 'use client'
 import { createContext, useContext, useEffect, useState } from "react";
-// const { createContext } = require("react")
-
 
 // instrukcja obslugi
 //
@@ -30,6 +28,9 @@ export const SettingsProvider = ({ children }) => {
         saturationModifier: 1,
         isReduceMotion: false,
         isReduceBlur: false,
+        
+        // utils
+        isNavbarHidden: false,
 
         fontSize: "normal",
 

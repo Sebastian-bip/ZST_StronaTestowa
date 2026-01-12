@@ -1,0 +1,269 @@
+/* file with colors tokens */
+
+:root{
+
+/*   -----   brand   -----   */ 
+/* D7193C  normal color value 500 */
+
+--brand-100: hsl(var(--brand-100-hsl)/1);
+--brand-100-hsl: 348 calc(var(--saturation-factor, 1)*79%) 96%;
+
+--brand-130: hsl(var(--brand-130-hsl)/1);
+--brand-130-hsl: 348 calc(var(--saturation-factor, 1)*79%) 92%;
+
+--brand-160: hsl(var(--brand-160-hsl)/1);
+--brand-160-hsl: 348 calc(var(--saturation-factor, 1)*79%) 89%;
+
+--brand-200: hsl(var(--brand-200-hsl)/1);
+--brand-200-hsl: 349 calc(var(--saturation-factor, 1)*79%) 85%;
+
+--brand-230: hsl(var(--brand-230-hsl)/1);
+--brand-230-hsl: 349 calc(var(--saturation-factor, 1)*79%) 85%;
+
+--brand-260: hsl(var(--brand-260-hsl)/1);
+--brand-260-hsl: 349 calc(var(--saturation-factor, 1)*79%) 77%;
+
+--brand-300: hsl(var(--brand-300-hsl)/1);
+--brand-300-hsl: 349 calc(var(--saturation-factor, 1)*79%) 74%;
+
+--brand-330: hsl(var(--brand-330-hsl)/1);
+--brand-330-hsl: 349 calc(var(--saturation-factor, 1)*79%) 70%;
+
+--brand-345: hsl(var(--brand-345-hsl)/1);
+--brand-345-hsl: 349 calc(var(--saturation-factor, 1)*79%) 66%;
+
+--brand-360: hsl(var(--brand-360-hsl)/1);
+--brand-360-hsl: 349 calc(var(--saturation-factor, 1)*79%) 62%;
+
+--brand-400: hsl(var(--brand-400-hsl)/1);
+--brand-400-hsl: 349 calc(var(--saturation-factor, 1)*79%) 58%;
+
+--brand-430: hsl(var(--brand-430-hsl)/1);
+--brand-430-hsl: 349 calc(var(--saturation-factor, 1)*79%) 55%;
+
+--brand-460: hsl(var(--brand-460-hsl)/1);
+--brand-460-hsl: 349 calc(var(--saturation-factor, 1)*79%) 51%;
+
+--brand-500: hsl(var(--brand-500-hsl)/1);
+--brand-500-hsl: 349 calc(var(--saturation-factor, 1)*79%) 47%;
+
+--brand-530: hsl(var(--brand-530-hsl)/1);
+--brand-530-hsl: 349 calc(var(--saturation-factor, 1)*79%) 44%;
+
+--brand-560: hsl(var(--brand-560-hsl)/1);
+--brand-560-hsl: 349 calc(var(--saturation-factor, 1)*79%) 40%;
+
+--brand-600: hsl(var(--brand-600-hsl)/1);
+--brand-600-hsl: 349 calc(var(--saturation-factor, 1)*79%) 37%;
+
+--brand-630: hsl(var(--brand-630-hsl)/1);
+--brand-630-hsl: 349 calc(var(--saturation-factor, 1)*79%) 34%;
+
+--brand-660: hsl(var(--brand-660-hsl)/1);
+--brand-660-hsl: 349 calc(var(--saturation-factor, 1)*79%) 30%;
+
+--brand-700: hsl(var(--brand-700-hsl)/1);
+--brand-700-hsl: 349 calc(var(--saturation-factor, 1)*80%) 27%;
+
+--brand-730: hsl(var(--brand-730-hsl)/1);
+--brand-730-hsl: 349 calc(var(--saturation-factor, 1)*78%) 24%;
+
+--brand-760: hsl(var(--brand-760-hsl)/1);
+--brand-760-hsl: 349 calc(var(--saturation-factor, 1)*79%) 20%;
+
+--brand-800: hsl(var(--brand-800-hsl)/1);
+--brand-800-hsl: 349 calc(var(--saturation-factor, 1)*79%) 17%;
+
+--brand-830: hsl(var(--brand-830-hsl)/1);
+--brand-830-hsl: 349 calc(var(--saturation-factor, 1)*79%) 13%;
+
+--brand-860: hsl(var(--brand-860-hsl)/1);
+--brand-860-hsl: 348 calc(var(--saturation-factor, 1)*80%) 10%;
+
+--brand-900: hsl(var(--brand-900-hsl)/1);
+--brand-900-hsl: 349 calc(var(--saturation-factor, 1)*77%) 7%;
+
+--brand-930: hsl(var(--brand-930-hsl)/1);
+--brand-930-hsl: 351 calc(var(--saturation-factor, 1)*76%) 3%;
+
+--brand-960: hsl(var(--brand-960-hsl)/1);
+--brand-960-hsl: 351 calc(var(--saturation-factor, 1)*76%) 3%;
+
+/*   -----   tło   -----   */
+--primary-100: hsl(var(--primary-100-hsl) / 1);
+--primary-100-hsl: 215 0% 97.6%;
+
+--primary-130: hsl(var(--primary-130-hsl) / 1);
+--primary-130-hsl: 215 0.3% 95.5%;
+
+--primary-160: hsl(var(--primary-160-hsl) / 1);
+--primary-160-hsl: 215 0.4% 93%;
+
+--primary-200: hsl(var(--primary-200-hsl) / 1);
+--primary-200-hsl: 215 0.4% 90%;
+
+--primary-230: hsl(var(--primary-230-hsl) / 1);
+--primary-230-hsl: 215 0.5% 87%;
+
+--primary-260: hsl(var(--primary-260-hsl) / 1);
+--primary-260-hsl: 215 0.5% 83.7%;
+
+--primary-300: hsl(var(--primary-300-hsl) / 1);
+--primary-300-hsl: 215 0.5% 78.8%;
+
+--primary-330: hsl(var(--primary-330-hsl) / 1);
+--primary-330-hsl: 215 0.5% 73.3%;
+
+--primary-345: hsl(var(--primary-345-hsl) / 1);
+--primary-345-hsl: 215 0.5% 67.4%;
+
+--primary-360: hsl(var(--primary-360-hsl) / 1);
+--primary-360-hsl: 215 0.5% 61.2%;
+
+--primary-400: hsl(var(--primary-400-hsl) / 1);
+--primary-400-hsl: 215 0.5% 52.9%;
+
+--primary-430: hsl(var(--primary-430-hsl) / 1);
+--primary-430-hsl: 215 0.5% 44.9%;
+
+--primary-460: hsl(var(--primary-460-hsl) / 1);
+--primary-460-hsl: 215 0.5% 38%;
+
+--primary-500: hsl(var(--primary-500-hsl) / 1);
+--primary-500-hsl: 215 0.5% 32.5%;
+
+--primary-530: hsl(var(--primary-530-hsl) / 1);
+--primary-530-hsl: 215 0.5% 27.3%;
+
+--primary-560: hsl(var(--primary-560-hsl) / 1);
+--primary-560-hsl: 215 0.5% 23.5%;
+
+--primary-600: hsl(var(--primary-600-hsl) / 1);
+--primary-600-hsl: 215 0.5% 20.6%;
+
+--primary-630: hsl(var(--primary-630-hsl) / 1);
+--primary-630-hsl: 215 0.5% 18%;
+
+--primary-645: hsl(var(--primary-645-hsl) / 1);
+--primary-645-hsl: 215 0.5% 16.8%;
+
+--primary-660: hsl(var(--primary-660-hsl) / 1);
+--primary-660-hsl: 215 0.5% 14.7%;
+
+--primary-700: hsl(var(--primary-700-hsl) / 1);
+--primary-700-hsl: 215 0.5% 12.5%;
+
+--primary-730: hsl(var(--primary-730-hsl) / 1);
+--primary-730-hsl: 215 0.4% 11%;
+
+--primary-760: hsl(var(--primary-760-hsl) / 1);
+--primary-760-hsl: 215 0.4% 9.2%;
+
+--primary-800: hsl(var(--primary-800-hsl) / 1);
+--primary-800-hsl: 215 0.4% 7.3%;
+
+--primary-830: hsl(var(--primary-830-hsl) / 1);
+--primary-830-hsl: 215 0.3% 4.9%;
+
+--primary-860: hsl(var(--primary-860-hsl) / 1);
+--primary-860-hsl: 215 0.2% 2.5%;
+
+--primary-900: hsl(var(--primary-900-hsl) / 1);
+--primary-900-hsl: 215 0% 0.8%;
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/* tło ciepłe/ sandpaper style */
+.sandpaper-colors{
+--primary-100: hsl(var(--primary-100-hsl) / 1);
+--primary-100-hsl: 42 calc(var(--saturation-factor, 1) * 5%) 96.8%;
+
+--primary-130: hsl(var(--primary-130-hsl) / 1);
+--primary-130-hsl: 42 calc(var(--saturation-factor, 1) * 5.2%) 94.5%;
+
+--primary-160: hsl(var(--primary-160-hsl) / 1);
+--primary-160-hsl: 42 calc(var(--saturation-factor, 1) * 5.5%) 92%;
+
+--primary-200: hsl(var(--primary-200-hsl) / 1);
+--primary-200-hsl: 42 calc(var(--saturation-factor, 1) * 5.8%) 89%;
+
+--primary-230: hsl(var(--primary-230-hsl) / 1);
+--primary-230-hsl: 42 calc(var(--saturation-factor, 1) * 6%) 86%;
+
+--primary-260: hsl(var(--primary-260-hsl) / 1);
+--primary-260-hsl: 42 calc(var(--saturation-factor, 1) * 6%) 82.5%;
+
+--primary-300: hsl(var(--primary-300-hsl) / 1);
+--primary-300-hsl: 42 calc(var(--saturation-factor, 1) * 5.8%) 77.5%;
+
+--primary-330: hsl(var(--primary-330-hsl) / 1);
+--primary-330-hsl: 42 calc(var(--saturation-factor, 1) * 5.5%) 72%;
+
+--primary-345: hsl(var(--primary-345-hsl) / 1);
+--primary-345-hsl: 42 calc(var(--saturation-factor, 1) * 5%) 66%;
+
+--primary-360: hsl(var(--primary-360-hsl) / 1);
+--primary-360-hsl: 42 calc(var(--saturation-factor, 1) * 4.5%) 60%;
+
+--primary-400: hsl(var(--primary-400-hsl) / 1);
+--primary-400-hsl: 42 calc(var(--saturation-factor, 1) * 4%) 52%;
+
+--primary-430: hsl(var(--primary-430-hsl) / 1);
+--primary-430-hsl: 42 calc(var(--saturation-factor, 1) * 3.8%) 44%;
+
+--primary-460: hsl(var(--primary-460-hsl) / 1);
+--primary-460-hsl: 42 calc(var(--saturation-factor, 1) * 3.5%) 37%;
+
+--primary-500: hsl(var(--primary-500-hsl) / 1);
+--primary-500-hsl: 42 calc(var(--saturation-factor, 1) * 3.2%) 31%;
+
+--primary-530: hsl(var(--primary-530-hsl) / 1);
+--primary-530-hsl: 42 calc(var(--saturation-factor, 1) * 3%) 26%;
+
+--primary-560: hsl(var(--primary-560-hsl) / 1);
+--primary-560-hsl: 42 calc(var(--saturation-factor, 1) * 2.8%) 22%;
+
+--primary-600: hsl(var(--primary-600-hsl) / 1);
+--primary-600-hsl: 42 calc(var(--saturation-factor, 1) * 2.6%) 19%;
+
+--primary-630: hsl(var(--primary-630-hsl) / 1);
+--primary-630-hsl: 42 calc(var(--saturation-factor, 1) * 2.4%) 16.5%;
+
+--primary-645: hsl(var(--primary-645-hsl) / 1);
+--primary-645-hsl: 42 calc(var(--saturation-factor, 1) * 2.2%) 15%;
+
+--primary-660: hsl(var(--primary-660-hsl) / 1);
+--primary-660-hsl: 42 calc(var(--saturation-factor, 1) * 2%) 13%;
+
+--primary-700: hsl(var(--primary-700-hsl) / 1);
+--primary-700-hsl: 42 calc(var(--saturation-factor, 1) * 1.8%) 11%;
+
+--primary-730: hsl(var(--primary-730-hsl) / 1);
+--primary-730-hsl: 42 calc(var(--saturation-factor, 1) * 1.6%) 9.5%;
+
+--primary-760: hsl(var(--primary-760-hsl) / 1);
+--primary-760-hsl: 42 calc(var(--saturation-factor, 1) * 1.4%) 8%;
+
+--primary-800: hsl(var(--primary-800-hsl) / 1);
+--primary-800-hsl: 42 calc(var(--saturation-factor, 1) * 1.2%) 6.5%;
+
+--primary-830: hsl(var(--primary-830-hsl) / 1);
+--primary-830-hsl: 42 calc(var(--saturation-factor, 1) * 1%) 4.5%;
+
+--primary-860: hsl(var(--primary-860-hsl) / 1);
+--primary-860-hsl: 42 calc(var(--saturation-factor, 1) * 0.8%) 2.5%;
+
+--primary-900: hsl(var(--primary-900-hsl) / 1);
+--primary-900-hsl: 42 calc(var(--saturation-factor, 1) * 0.5%) 1%;
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto+Flex:opsz,wdth,wght,GRAD,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,151,100..1000,80,96,468,79,-203,738,514,712&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 a, abbr, acronym, address, applet, big, blockquote, body, button, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, iframe, img, input, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var {
     margin: 0;
     padding: 0;
@@ -8,4 +10,25 @@ a, abbr, acronym, address, applet, big, blockquote, body, button, caption, cite,
     font-family: inherit;
     font-size: 100%;
     vertical-align: baseline;
+}
+
+*{
+    transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body{
+    background-color: var(--background-page-primary);
+    font-family: "JetBrains Mono", monospace !important;
+}
+
+.theme-light ::selection, .theme-light ::-moz-selection {
+    background: #000000;
+    color: rgb(255, 255, 255);
+    text-shadow: none;
+}
+
+.theme-dark ::selection, .theme-dark ::-moz-selection {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    text-shadow: none;
 }

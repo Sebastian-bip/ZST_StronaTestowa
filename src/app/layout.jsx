@@ -1,21 +1,8 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import NavBar from "@/_components/navbar/navbar";
+import "./core.css"
 import "./globals.css";
-
-import "./temp.css"
-import "./temp2.css"
-import "./final.css";
 import { Providers } from "@/_lib/Providers";
 
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: {
@@ -29,25 +16,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+
+//  Dodajemy suppressHydrationWarning do <html>, 
+//  ponieważ nasz skrypt będzie zmieniał klasy/atrybuty 
+//  zaraz po załadowaniu strony.
   return (
     <html lang="pl">
-            {/* 
-         Dodajemy suppressHydrationWarning do <html>, 
-         ponieważ nasz skrypt będzie zmieniał klasy/atrybuty 
-         zaraz po załadowaniu strony.
-
-
-         visual-refresh
-      */}
       <body suppressHydrationWarning
-
-        className={`${geistSans.variable} ${geistMono.variable} antialiased 
-        
-        `}
-
-        style={{"--custom-theme-base-color-amount": "100%"}}
+        className={''}
       >
         <Providers>
+          <NavBar></NavBar>
           {children}
         </Providers>
       </body>

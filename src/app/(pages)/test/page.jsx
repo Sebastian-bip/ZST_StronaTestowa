@@ -1,3 +1,4 @@
+import Link from "next/link"
 import ButtonTest from "./btntest"
 import "./test.css"
 
@@ -12,13 +13,17 @@ export default function Test() {
 
     return(
         <>
-            <div>
-                <img hidden src="https://images.pexels.com/photos/33229939/pexels-photo-33229939.jpeg" alt=""/>
-                <div className="test-container">
-                    <div className="test-content">Test</div>
-                    <ButtonTest></ButtonTest>
+            <div className="testing">
+                <div>
+                    <img src="https://images.pexels.com/photos/33229939/pexels-photo-33229939.jpeg" alt=""/>
                 </div>
+                <div className="test-container">
+                        <div className="test-content">Warning</div>
+                        <ButtonTest></ButtonTest>
+                </div>
+                <Link href="/"><div style={{"height": '600px'}}>home</div></Link>
             </div>
+
         </>
     )
 }

@@ -1,0 +1,59 @@
+
+.notFoundContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+
+.fuzzyTextContainer {
+}
+
+
+/* tekst w zapetaniu */
+.curvedLoopContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh
+    z-index: 2;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.curvedLoopJacket {
+  margin-top: 79vh;
+  min-height: max-content;
+  /* min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; */
+}.curvedLoopSvg {
+    aspect-ratio: 100/ 6;
+    font-size: 128px;
+  /* user-select: none;
+  width: 100%;
+  aspect-ratio: 100 / 12;
+  overflow: visible;
+  display: block;
+  font-size: 4rem;
+  fill: #ffffff;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1; */
+}
