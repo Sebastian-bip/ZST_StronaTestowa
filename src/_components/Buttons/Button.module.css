@@ -1,0 +1,81 @@
+.button {
+    display: flex;
+
+
+    border-radius: 48px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: blueviolet; /* tylko w celach dev */
+
+    width: max-content;
+
+    cursor: pointer;
+
+    text-wrap: wrap;
+}
+
+
+.sm{
+    padding: 6px 12px;
+}
+
+.textSize-md{
+    font-size: 16px;
+}.textSize-sm{
+    font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+    .sm{
+    padding: 6px 12px;
+}
+
+.textSize-md{
+    font-size: 14px;
+}.textSize-sm{
+    font-size: 12px;
+}
+}
+
+
+.primary {
+    color: var(--primary-230);
+    background-color: var(--primary-700);
+    border-color: var(--primary-630);
+
+    &:hover {
+        color: var(--primary-200);
+        background-color: var(--primary-660);
+        border-color: var(--primary-600);
+    }&:active {
+        color: var(--primary-130);
+        background-color: var(--primary-600);
+        border-color: var(--primary-500);
+    }
+}
+
+.secondary {
+    color: var(--primary-330);
+    background-color: var(--primary-800);
+    border-color: var(--primary-760);
+    &:hover {
+        color: var(--primary-300);
+        background-color: var(--primary-760);
+        border-color: var(--primary-700);
+    }&:active {
+        color: var(--primary-200);
+        background-color: var(--primary-700);
+        border-color: var(--primary-600);
+    }
+}
+
+
+
+.buttonContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+}

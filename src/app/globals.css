@@ -15,7 +15,10 @@ a, abbr, acronym, address, applet, big, blockquote, body, button, caption, cite,
 *{
     transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
+html{
+    scroll-behavior: smooth;
+    background-color: var(--background-page-primary);
+}
 body{
     background-color: var(--background-page-primary);
     font-family: "JetBrains Mono", monospace !important;

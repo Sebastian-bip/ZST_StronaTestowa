@@ -2,19 +2,22 @@
 
 import { useEffect, useState } from "react"
 import FuzzyText from "@/_lib/TextAnimations/FuzzyText"
-import styles from "@/app/not-found.module.css"
+import styles from "./not-found.module.css"
 
 export default function NotFoundFuzzyText({ children }) {
     const [addedFontSize, setAddedFontSize] = useState(0)
 
     useEffect(() => {
         const handleResize = () => {
-            setAddedFontSize(window.innerWidth > 780 ? 32 : 0)
+            if(window.innerWidth > 780){
+                setAddedFontSize(window.innerWidth > 780 ? 64 : 0)
+                return
+            }
+            setAddedFontSize(window.innerWidth > 500 ? 32 : 0)
         }
 
         handleResize() // initial check
         window.addEventListener("resize", handleResize)
-        console.log("addedFontSize", addedFontSize)
 
         return () => window.removeEventListener("resize", handleResize)
     }, [])
@@ -27,8 +30,13 @@ export default function NotFoundFuzzyText({ children }) {
                 baseIntensity={0.2}
                 hoverIntensity={0.5}
                 enableHover={true}
+                transitionDuration={10}
+                clickEffect={true}
+                glitchMode={true}
+                letterSpacing={12}
                 //fontSize={128 - 16 + addedFontSize}
                 fontSize={96 + addedFontSize}
+                // fontSize='clamp(40px, 10vw, 156px)'
             >
                 {children}
             </FuzzyText>
