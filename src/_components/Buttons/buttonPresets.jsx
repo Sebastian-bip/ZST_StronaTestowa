@@ -12,13 +12,20 @@ export const BUTTON_CONTENT_PRESETS = {
         </>
     ),
 
-    textIcon: ({ children, iconName, iconSize }) => (
+    textIcon: ({ children, iconName, iconSize, iconClassName }) => (
         <>
-            <div className={`${styles.buttonContentTextIcont} ${styles.buttonContent}`}>
+            <div className={`${styles.buttonContentTextIcon} ${styles.buttonContent}`}>
                 <div className={styles.buttonContentTextInner}>
                     {children}
                 </div>
-                <Icon name={iconName} size={iconSize} />
+                <Icon name={iconName} size={iconSize} svgClassName={iconClassName}/>
+            </div>
+        </>
+    ),
+    icon: ({iconName, iconSize, iconClassName }) => (
+        <>
+            <div className={`${styles.buttonContentIcon} ${styles.buttonContent}`}>
+                <Icon name={iconName} size={iconSize} svgClassName={iconClassName}/>
             </div>
         </>
     )

@@ -1,5 +1,6 @@
-import styles from "./navbar.module.css"
+import Button from "@/_components/Buttons/Button";
 import { Icon } from "@/_lib/Icons";
+import styles from "./navbar.module.css"
 
 export default function NavbarUtilsPill() {
 
@@ -9,18 +10,28 @@ export default function NavbarUtilsPill() {
         id: 324356435
     }; //zamienic potem na sprawdzianie czy ktos jest zalogowany
 
-    User = null; // --- IGNORE ---
+    //User = null; // --- IGNORE ---
 
     if (!User) {return null;}
     else{return (
         <div className={styles.navbarPillContainer}>
             <div className={styles.navbarUtilsPill}>
-                Narzędzia:
+                {/* Dostepne narzedzia:
                 { User.role === "admin" && <Icon name="gear-wide" size={20}/>}
                 <Icon name="tools" size={20}/>
                 Zalogowano jako: {User.name}
                 <Icon name="person-circle" size={20}/>
-                <Icon name="box-arrow-right" size={20}/>
+                <Icon name="box-arrow-right" size={20}/> */}
+                <Button
+                    variant="navbar"
+                    content="icon"
+                    iconName="person-circle"
+                    iconSize={18}
+                    className={styles.userUtilsBtn}
+                    iconClassName={styles.userUtilsBtnIcon}
+                >
+
+                </Button>
             </div>
         </div>
     );}

@@ -7,7 +7,10 @@ import { BUTTON_CONTENT_PRESETS } from "./buttonPresets";
 
 // skala przycisku: '2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl'
 // warianty przycisku: 'primary', 'secondary', 'tertiary', 'danger', 'success', 'warning'
-// content: 'text', 'textIcon', 'IconText', 'iconOnly'
+
+// znaczy to samo co type, mozna uzywac do dowolnego layoutu w srodu
+// content: 'text', 'textIcon', 'IconText', 'icon'
+
 // iconName: nazwa ikony z biblioteki ikon
 // outlineOnly: true/false
 // transparent: true/false
@@ -27,11 +30,13 @@ const Button = ({
   iconSize = 16,
   disabled = false,
   className = "",
+  iconClassName = "",
   ...props
 }) => {
   const Content = BUTTON_CONTENT_PRESETS[content];
 
   const classes = [
+    className,
     styles.button,
     styles[variant],
     outlineOnly && styles.outline,
@@ -40,8 +45,8 @@ const Button = ({
     styles[size],
     styles[`textSize-${textSize}`],
     disabled && styles.disabled,
-    content === "iconOnly" && styles.iconButton,
-    className,
+    content === "icon" && styles.iconButton,
+    content === "textIcon" && styles.textIconButton,
   ]
     .filter(Boolean)
     .join(" ");
@@ -52,7 +57,7 @@ const Button = ({
       className={classes}
       {...props}
     >
-      {Content({ children, iconName, iconSize})}
+      {Content({ children, iconName, iconSize, iconClassName})}
     </button>
   );
 };

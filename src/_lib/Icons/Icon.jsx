@@ -3,7 +3,7 @@ import { ICONS } from "./icons";
 export function Icon({
   name,
   size = 16,
-  className,
+  svgClassName,
   ...props
 }) {
 
@@ -23,8 +23,8 @@ export function Icon({
       width={size}
       height={size}
       viewBox={icon.viewBox ?? DEFAULT_VIEWBOX}
-      fill="currentColor"
-      className={className}
+      fill="inherit"
+      className={svgClassName}
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >

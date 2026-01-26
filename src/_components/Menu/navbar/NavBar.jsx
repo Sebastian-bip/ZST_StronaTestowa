@@ -1,13 +1,22 @@
+'use client'
 import { Icon } from "@/_lib/Icons"
 import styles from "./navbar.module.css"
 import NavbarTitle from "./NavbarTitle"
 import NavbarUtilsPill from "./NavbarUserPill"
 import Link from "next/link"
+import { useMenu } from "@/_lib/Providers/MenuContext";
+import Button from "@/_components/Buttons/Button"
+
+
 
 export default function NavBar() {
+    const { isOpen, toggleMenu, closeMenu } = useMenu()
+
+    
+
 
     return (
-    <div className={styles.navbar}>
+    <div className={`${styles.navbar} ${isOpen && styles.navbarMenuOpen}`}>
         <div className={styles.navbarWrapper}>
             <div className={styles.navbarPillWrapper}>
                 <div className={styles.navbarPillContainer}>
@@ -22,14 +31,16 @@ export default function NavBar() {
             <div className={styles.navbarPillWrapper}>
                 <NavbarUtilsPill></NavbarUtilsPill>
                 <div className={styles.navbarPillContainer}>
-                    <button className={styles.navbarBtn}>
-                        <div className={styles.navbarBtnText}>
-                            Menu
-                        </div>
-                        <div className={styles.navbarBtnIcon}>
-                            <Icon name="list"/>
-                        </div>
-                    </button>
+                    <Button
+                        variant="navbar"
+                        content="textIcon"
+                        iconName='list'
+                        size="custom"
+                        onClick={toggleMenu}
+                        className={styles.navbarMenuBtn}
+                    >
+                        Menu
+                    </Button>
                 </div>
             </div>
         </div>

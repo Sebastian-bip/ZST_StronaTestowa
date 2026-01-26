@@ -1,7 +1,10 @@
-import NavBar from "@/_components/navbar/navbar";
+import Menu from "@/_components/Menu";
 import "./core.css"
 import "./globals.css";
 import { Providers } from "@/_lib/Providers";
+import {Roboto,Roboto_Flex,Roboto_Mono,JetBrains_Mono,} from 'next/font/google'
+
+
 
 
 export const metadata = {
@@ -15,6 +18,11 @@ export const metadata = {
   }
 };
 
+const roboto = Roboto({subsets: ['latin'],variable: '--font-roboto',})
+const robotoFlex = Roboto_Flex({subsets: ['latin'],variable: '--font-roboto-flex',})
+const robotoMono = Roboto_Mono({subsets: ['latin'],variable: '--font-roboto-mono',})
+const jetBrainsMono = JetBrains_Mono({subsets: ['latin'],variable: '--font-jetBrainsMono',})
+
 export default function RootLayout({ children }) {
 
 
@@ -24,10 +32,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pl">
       <body suppressHydrationWarning
-        className={''}
+        className={`${roboto.variable}${robotoFlex.variable}${robotoMono.variable}`}
       >
         <Providers>
-          <NavBar></NavBar>
+          <Menu/>
           {children}
         </Providers>
       </body>

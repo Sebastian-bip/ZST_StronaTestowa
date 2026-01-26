@@ -3,6 +3,10 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
     /* border: 1px solid blue; */
     border-radius: 6px;
@@ -12,6 +16,14 @@
 
 }
 
+.navbarMenuOpen{
+    /* top: -50px;
+    opacity: 0; */
+}
+.navbarMenuOpen .navbarPillContainer{
+    border-color: red;
+}
+
 .navbarWrapper{
     position: relative;
     /* margin: 8px; */
@@ -19,7 +31,7 @@
     /* border: 1px solid rgb(255, 0, 0); border-radius: 4px; */
     display: flex;
     justify-content: space-between;
-    width: calc(100vw - 16px - 16px);
+    width: calc(100% - 16px );
     max-width: 1400px;
     gap: 8px;
 
@@ -42,8 +54,11 @@
 }
 .navbarPillWrapper{
     /* margin-inline: 8px; */
+    
     display: flex;
     gap: 8px;
+}.navbarPillWrapper>div:has(img){
+    margin-right: ;
 }
 .navbarPillContainer{
     display: flex;
@@ -112,6 +127,15 @@
     font-weight: 400;
 }
 
+
+
+.navbarMenuBtn{
+    font-weight: 400;
+    padding: 4px 8px;
+    padding-right: 6px;
+    &>div{gap: 4px;}
+}
+
 /* user pill */
 
 .navbarUtilsPill{
@@ -119,10 +143,9 @@
     align-items: center;
     gap: 8px;
 
-    margin-inline: 6px;
-
 
     font-size: 12px;
     color: var(--primary-260);
     font-weight: 500;
 }
+

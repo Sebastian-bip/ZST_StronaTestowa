@@ -14,7 +14,12 @@
 
     text-wrap: wrap;
 }
-
+.iconButton{
+    /* padding: 0; */
+}
+.iconButton.sm{
+    padding: 6px;
+}
 
 .sm{
     padding: 6px 12px;
@@ -41,15 +46,18 @@
 
 .primary {
     color: var(--primary-230);
+    fill: var(--primary-230);
     background-color: var(--primary-700);
     border-color: var(--primary-630);
 
     &:hover {
         color: var(--primary-200);
+        fill: var(--primary-200);
         background-color: var(--primary-660);
         border-color: var(--primary-600);
     }&:active {
         color: var(--primary-130);
+        fill: var(--primary-130);
         background-color: var(--primary-600);
         border-color: var(--primary-500);
     }
@@ -57,14 +65,17 @@
 
 .secondary {
     color: var(--primary-330);
+    fill: var(--primary-230);
     background-color: var(--primary-800);
     border-color: var(--primary-760);
     &:hover {
         color: var(--primary-300);
+        fill: var(--primary-300);
         background-color: var(--primary-760);
         border-color: var(--primary-700);
     }&:active {
         color: var(--primary-200);
+        fill: var(--primary-200);
         background-color: var(--primary-700);
         border-color: var(--primary-600);
     }
@@ -79,3 +90,32 @@
 
     gap: 6px;
 }
+
+
+
+
+
+/* róznie warianty  */
+
+.navbar{
+    color: var(--primary-260);
+    fill: var(--primary-230);
+
+    font-size: 15px;
+    
+    border: 1px solid transparent;
+    background-color: transparent;
+    &:hover{
+        background-color: hsl(var(--primary-100-hsl)/0.06);
+        border-color: hsl(var(--primary-100-hsl)/0.08);
+    }&:active{
+        background-color: hsl(var(--primary-100-hsl)/0.12);
+        border-color: hsl(var(--primary-100-hsl)/0.16);
+    }
+    
+}
+
+.navbar.iconButton{
+    padding: 4px;
+}
+

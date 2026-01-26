@@ -8,7 +8,9 @@ import NotFoundCard from "./NotFoundCard"
 
 export default function NotFound({ children }) {
 
+    const loopText = '404 ✦ Nie można odnaleźć strony ✦ 404 ✦ Podany adres jest nie osiągalny ✦ 404 ✦ Zespół Szkół Technicznych im. 10 Pułku Piechoty w Łowiczu ✦ 404 ✦ Witryna nie istnieje ✦ 404 ✦ Nie odnaleziono zasobu ✦'
 
+    
 
     return(
         <>
@@ -17,7 +19,7 @@ export default function NotFound({ children }) {
                 <NotFoundCard></NotFoundCard>
                 <div className={styles.curvedLoopContainer}>
                     <CurvedLoop
-                        marqueeText="Nie można odnaleźć strony ✦ Podany adres jest nie osiągalny ✦ 404 ✦ Witryna nie istnieje ✦ Nie odnaleziono zasobu ✦"
+                        marqueeText={loopText}
                         curveAmount={0}
                         speed={2.5}
                         className={styles.curvedLoop}
@@ -26,7 +28,7 @@ export default function NotFound({ children }) {
                     />
                 </div>
             </div>
-            <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden' }}>
+            <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', borderRadius: '24px'}}>
                 <Aurora
                 // colorStops={["#9900ff","#B19EEF","#5227FF"]}
                 colorStops={["#9900ff","#B19EEF","#5227FF"]}

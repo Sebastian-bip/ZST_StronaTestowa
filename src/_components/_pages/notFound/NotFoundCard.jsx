@@ -8,10 +8,14 @@ import { useRouter } from 'next/navigation'
 
 export default function NotFoundCard({ children }) {
 
+    // dodac sprawdznie zalowoganego uzytkownika
+    const user = true
+
     const router = useRouter();
 
     const handleGoHome = () => router.push('/');
     const handleContactAdmin = () => router.push('/administracja');
+    const handleAdminPanel = () => router.push('/dashboard');
 
     return (
         <div className={styles.notFoundCard}>
@@ -27,9 +31,7 @@ export default function NotFoundCard({ children }) {
                         iconName="arrow-up-right-square"
                         iconSize={16}
                         transparent={true}
-                    >
-                        Powrót do strony głównej
-                    </Button>
+                    >Powrót do strony głównej</Button>
                     <Button
                         onClick={handleContactAdmin}
                         variant="secondary"
@@ -38,9 +40,16 @@ export default function NotFoundCard({ children }) {
                         iconName="arrow-up-right-square"
                         iconSize={14}
                         transparent={true}
-                    >
-                        W razie problemów skontaktuj się z administracją
-                    </Button>
+                    >W razie problemów skontaktuj się z administracją</Button>
+                    {user &&<Button
+                        onClick={handleAdminPanel}
+                        variant="secondary"
+                        content="textIcon"
+                        textSize="sm"
+                        iconName="arrow-up-right-square"
+                        iconSize={14}
+                        transparent={true}
+                    >Panel administratora</Button>}
                     
                     {/* <Link href="/" className={styles.notFoundBtn}>Powrót do strony głównej</Link> */}
                     {/* <Link href="/administracja" className={styles.notFoundBtnSecondary}>W razie problemów skontaktuj się z administracją</Link> */}
