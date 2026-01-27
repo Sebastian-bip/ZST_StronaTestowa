@@ -29,7 +29,7 @@ export const LINKS = {
     id: 'szkola',
     label: 'Szkoła',
     href: '/szkola',
-    description: 'Strona główna sekcji informacji o szkole',
+    description: 'Główna strona sekcji poświęconej Zespołowi Szkół Technicznych – prezentacja szkoły, jej misji i wartości.',
     meta: { flags: ['section'] }
   },
 
@@ -37,7 +37,7 @@ export const LINKS = {
     id: 'dokumenty',
     label: 'Dokumenty',
     href: '/dokumenty',
-    description: 'Strona główna sekcji dokumentów i regulaminów',
+    description: 'Zbiór oficjalnych dokumentów, regulaminów i polityk obowiązujących w szkole.',
     meta: { flags: ['section'] }
   },
 
@@ -45,7 +45,7 @@ export const LINKS = {
     id: 'informacje',
     label: 'Informacje',
     href: '/informacje',
-    description: 'Strona główna sekcji informacji ogólnych',
+    description: 'Ogólne informacje o szkole, aktualności, komunikaty i ważne ogłoszenia.',
     meta: { flags: ['section'] }
   },
 
@@ -53,19 +53,27 @@ export const LINKS = {
     id: 'rekrutacja',
     label: 'Rekrutacja',
     href: '/rekrutacja',
-    description: 'Strona główna sekcji rekrutacji',
+    description: 'Wszystko o rekrutacji do ZST – oferta edukacyjna, harmonogram, zasady naboru.',
     meta: { flags: ['section'] }
   },
 
   // =========================================================================
   // PODSEKCJE (strony zborcze podsekcji)
   // =========================================================================
+
+  oSzkole: {
+    id: 'oSzkole',
+    label: 'O szkole',
+    href: '/o-szkole',
+    description: 'Poznaj historię, misję i wizję naszej szkoły oraz zapoznaj się z kadrą pedagogiczną.',
+    meta: { flags: ['subSection'] }
+  },
   
   regulaminy: {
     id: 'regulaminy',
     label: 'Regulaminy',
     href: '/regulaminy',
-    description: 'Przegląd wszystkich regulaminów obowiązujących w placówce',
+    description: 'Kompletny wykaz regulaminów obowiązujących w Zespole Szkół Technicznych.',
     meta: { flags: ['subSection'] }
   },
 
@@ -73,7 +81,7 @@ export const LINKS = {
     id: 'archiwum',
     label: 'Archiwum',
     href: '/archiwum',
-    description: 'Archiwum materiałów i zasobów ZST',
+    description: 'Archiwum dokumentów, materiałów i zasobów historycznych szkoły.',
     meta: { flags: ['subSection'] }
   },
 
@@ -81,7 +89,7 @@ export const LINKS = {
     id: 'strewaUcznia',
     label: 'Uczniowie',
     href: '/uczniowie',
-    description: 'Strefa dla uczniów – plany lekcji, materiały edukacyjne',
+    description: 'Strefa ucznia: plany lekcji, materiały edukacyjne, ważne informacje dla uczniów.',
     meta: { flags: ['subSection'] }
   },
 
@@ -89,7 +97,7 @@ export const LINKS = {
     id: 'strewaRodzica',
     label: 'Rodzice',
     href: '/rodzice',
-    description: 'Strefa dla rodziców – informacje, terminy zebrań, dostępność nauczycieli',
+    description: 'Strefa rodzica: komunikaty, terminy zebrań, kontakt z nauczycielami.',
     meta: { flags: ['subSection'] }
   },
 
@@ -97,7 +105,7 @@ export const LINKS = {
     id: 'strefaNauczyciela',
     label: 'Nauczyciele',
     href: '/nauczyciele',
-    description: 'Strefa dla nauczycieli – plany lekcji, narzędzia administracyjne',
+    description: 'Strefa nauczyciela: narzędzia, plany lekcji, materiały i informacje dla kadry.',
     meta: { flags: ['subSection'] }
   },
 
@@ -105,7 +113,7 @@ export const LINKS = {
     id: 'nabor',
     label: 'Nabór',
     href: '/nabor',
-    description: 'Strona główna procedury rekrutacji i naboru do szkoły',
+    description: 'Informacje o procesie naboru do szkoły, wymagania i procedury.',
     meta: { flags: ['subSection'] }
   },
 
@@ -117,7 +125,7 @@ export const LINKS = {
     id: 'historiaSzkoly',
     label: 'Historia szkoły',
     href: '/historia-szkoly',
-    description: 'Historia i tradycje Zespołu Szkół Technicznych',
+    description: 'Poznaj historię, tradycje i osiągnięcia Zespołu Szkół Technicznych.',
     meta: { flags: [] }
   },
 
@@ -125,7 +133,7 @@ export const LINKS = {
     id: 'kadra',
     label: 'Kadra',
     href: '/kadra',
-    description: 'Skład kadry pedagogicznej i pracowniczej szkoły',
+    description: 'Prezentacja kadry pedagogicznej i pracowników szkoły.',
     meta: { flags: [] }
   },
 
@@ -133,7 +141,7 @@ export const LINKS = {
     id: 'patron',
     label: 'Patron szkoły',
     href: '/patron',
-    description: 'Informacje o patronie szkoły i jego znaczeniu',
+    description: 'Informacje o patronie szkoły, jego sylwetce i znaczeniu dla społeczności.',
     meta: { flags: [] }
   },
 
@@ -145,7 +153,7 @@ export const LINKS = {
     id: 'statut',
     label: 'Statut Szkoły',
     href: '/statut-zst',
-    description: 'Statut i regulamin Zespołu Szkół Technicznych',
+    description: 'Statut ZST – podstawowy dokument określający zasady funkcjonowania szkoły.',
     meta: { flags: [] }
   },
 
@@ -153,7 +161,7 @@ export const LINKS = {
     id: 'rodo',
     label: 'RODO',
     href: '/rodo',
-    description: 'Informacje o przetwarzaniu danych osobowych i polityka RODO',
+    description: 'Zasady ochrony danych osobowych (RODO) obowiązujące w szkole.',
     meta: { flags: [] }
   },
 
@@ -161,7 +169,7 @@ export const LINKS = {
     id: 'politykaPrywatnosci',
     label: 'Polityka prywatności',
     href: '/polityka-prywatnosci',
-    description: 'Polityka prywatności i zasady bezpieczeństwa danych',
+    description: 'Polityka prywatności i bezpieczeństwa danych w ZST.',
     meta: { flags: [] }
   },
 
@@ -170,7 +178,7 @@ export const LINKS = {
     id: 'regulaminyParking',
     label: 'Regulamin Parkingu',
     href: '/parking',
-    description: 'Regulamin korzystania z parkingu szkolnego',
+    description: 'Zasady korzystania z parkingu szkolnego dla uczniów i pracowników.',
     meta: { flags: [] }
   },
 
@@ -178,7 +186,7 @@ export const LINKS = {
     id: 'regulaminyMundurowka',
     label: 'Regulamin Grupy Mundurowej',
     href: '/grupa-mundurowa',
-    description: 'Regulamin i zasady działania grupy mundurowej',
+    description: 'Regulamin funkcjonowania i obowiązki członków grupy mundurowej.',
     meta: { flags: [] }
   },
 
@@ -186,7 +194,7 @@ export const LINKS = {
     id: 'regulaminyStrzelnica',
     label: 'Regulamin Strzelnicy',
     href: '/strzelnica',
-    description: 'Regulamin bezpieczeństwa i używania strzelnicy szkolnej',
+    description: 'Zasady bezpieczeństwa i korzystania ze strzelnicy szkolnej.',
     meta: { flags: [] }
   },
 
@@ -195,7 +203,7 @@ export const LINKS = {
     id: 'archiwumStaraStrona',
     label: 'Stara strona ZST',
     href: '/old',
-    description: 'Archiwalna wersja strony internetowej szkoły',
+    description: 'Archiwalna wersja poprzedniej strony internetowej szkoły.',
     meta: { flags: [] }
   },
 
@@ -207,7 +215,7 @@ export const LINKS = {
     id: 'komunikaty',
     label: 'Komunikaty i ogłoszenia',
     href: '/komunikaty',
-    description: 'Bieżące komunikaty, ogłoszenia i wiadomości ze szkoły',
+    description: 'Aktualne komunikaty, ogłoszenia i ważne informacje dla społeczności szkolnej.',
     meta: { flags: [] }
   },
 
@@ -216,7 +224,7 @@ export const LINKS = {
     id: 'planLekciUczen',
     label: 'Plan lekcji',
     href: '/plan-lekcji?type=uczen',
-    description: 'Plan lekcji dla uczniów poszczególnych klas',
+    description: 'Aktualny plan lekcji dla uczniów wszystkich klas.',
     meta: { flags: [] }
   },
 
@@ -224,7 +232,7 @@ export const LINKS = {
     id: 'wykazPodrecznikow',
     label: 'Wykaz Podręczników',
     href: '/wykaz-podrecznikow',
-    description: 'Lista wymaganych podręczników na poszczególne klasy',
+    description: 'Lista podręczników obowiązujących w bieżącym roku szkolnym.',
     meta: { flags: [] }
   },
 
@@ -232,7 +240,7 @@ export const LINKS = {
     id: 'wymaganiaEdukacyjne',
     label: 'Wymagania edukacyjne',
     href: '/wymagania-edukacujne',
-    description: 'Wymagania edukacyjne dla poszczególnych przedmiotów i klas',
+    description: 'Wymagania edukacyjne dla przedmiotów i klas w ZST.',
     meta: { flags: [] }
   },
 
@@ -241,7 +249,7 @@ export const LINKS = {
     id: 'zebrania',
     label: 'Terminy zebrań',
     href: '/zebrania',
-    description: 'Harmonogram zebrań rodziców i opiekunów',
+    description: 'Harmonogram zebrań z rodzicami i opiekunami uczniów.',
     meta: { flags: [] }
   },
 
@@ -249,7 +257,7 @@ export const LINKS = {
     id: 'godzinyDostepnosciRodzice',
     label: 'Godziny dostępności dla nauczycieli',
     href: '/godziny-dostepnosci',
-    description: 'Godziny, w których nauczyciele są dostępni dla rodziców',
+    description: 'Godziny konsultacji nauczycieli dla rodziców i opiekunów.',
     meta: { flags: [] }
   },
 
@@ -257,7 +265,7 @@ export const LINKS = {
     id: 'dziennikRodzic',
     label: 'Dziennik elektroniczny - Vulcan',
     href: '/dziennik-rodzic',
-    description: 'Informacje o dostępie do elektronicznego dziennika ucznia',
+    description: 'Dostęp do elektronicznego dziennika ucznia dla rodziców.',
     meta: { flags: [] }
   },
 
@@ -266,7 +274,7 @@ export const LINKS = {
     id: 'planLekcjiNauczyciela',
     label: 'Plan lekcji nauczyciela',
     href: '/plan-lekcji?type=nauczyciele',
-    description: 'Plan lekcji dla nauczycieli poszczególnych przedmiotów',
+    description: 'Plan lekcji i zajęć dla nauczycieli ZST.',
     meta: { flags: [] }
   },
 
@@ -274,7 +282,7 @@ export const LINKS = {
     id: 'planLekcjiSale',
     label: 'Plan lekcji sal lekcyjnych',
     href: '/plan-lekcji?type=sala',
-    description: 'Harmonogram wykorzystania sal lekcyjnych',
+    description: 'Harmonogram wykorzystania sal lekcyjnych w szkole.',
     meta: { flags: [] }
   },
 
@@ -282,7 +290,7 @@ export const LINKS = {
     id: 'projektyUe',
     label: 'Projekty UE',
     href: '/projekty-ue',
-    description: 'Informacje o współfinansowanych projektach unijnych',
+    description: 'Informacje o projektach współfinansowanych ze środków Unii Europejskiej.',
     meta: { flags: [] }
   },
 
@@ -294,7 +302,7 @@ export const LINKS = {
     id: 'naszaOferta',
     label: 'Nasza oferta',
     href: '/oferta',
-    description: 'Przegląd oferty edukacyjnej i kierunków kształcenia',
+    description: 'Szczegółowa oferta edukacyjna ZST – kierunki, profile, specjalizacje.',
     meta: { flags: [] }
   },
 
@@ -302,7 +310,7 @@ export const LINKS = {
     id: 'harmonogramRekrutacji',
     label: 'Harmonogram rekrutacji',
     href: '/harmonogram-rekrutacji',
-    description: 'Harmonogram i terminy procedury rekrutacyjnej',
+    description: 'Terminy i etapy procesu rekrutacyjnego do szkoły.',
     meta: { flags: [] }
   },
 
@@ -310,7 +318,7 @@ export const LINKS = {
     id: 'naborElektroniczny',
     label: 'Nabór elektroniczny',
     href: '/nabor',
-    description: 'System elektronicznego naboru kandydatów do szkoły',
+    description: 'System elektronicznego naboru kandydatów do ZST.',
     meta: { flags: [] }
   },
 
@@ -318,7 +326,7 @@ export const LINKS = {
     id: 'naborSzkolaBranzowa2stopnia',
     label: 'Nabór do Branżowej Szkoły 2 Stopnia',
     href: '/nabor-szkola-branzowa-2stopnia',
-    description: 'Informacje o naborze do Branżowej Szkoły 2 Stopnia',
+    description: 'Zasady i informacje o naborze do Branżowej Szkoły II Stopnia.',
     meta: { flags: [] }
   },
 
@@ -326,8 +334,16 @@ export const LINKS = {
   // GŁÓWNE LINKI (top-level, bez sekcji nadrzędnej)
   // =========================================================================
 
-  wydarzenia: {
-    id: 'wydarzenia',
+  artykuly: {
+    id: 'artykuly',
+    label: 'Artykuły ',
+    href: '/artykuly',
+    description: 'Publikacje, artykuły i relacje z wydarzeń szkolnych.',
+    meta: { flags: [] }
+  },
+
+  wydarzenienia: {
+    id: 'wydarzenienia',
     label: 'Wydarzenia',
     href: '/wydarzenia',
     description: 'Przegląd wydarzeń, imprez i akcji organizowanych przez szkołę',
@@ -338,7 +354,7 @@ export const LINKS = {
     id: 'kontakt',
     label: 'Kontakt',
     href: '/kontakt',
-    description: 'Dane kontaktowe szkoły, adres, godziny urzędowania',
+    description: 'Dane kontaktowe szkoły: adres, telefon, godziny pracy sekretariatu.',
     meta: { flags: [] }
   },
 };

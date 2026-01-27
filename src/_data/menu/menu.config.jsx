@@ -49,9 +49,21 @@ export const MENU = [
       sideContent: null,
     },
     children: [
-      LINKS.historiaSzkoly,
-      LINKS.kadra,
-      LINKS.patron,
+      LINKS.wydarzenienia,
+      {
+        ...LINKS.oSzkole,
+        meta: {
+          ...LINKS.oSzkole.meta,
+          flags: ['subSection'],
+          menuDescription: 'Poznaj historię, misję i wizję naszej szkoły oraz zapoznaj się z kadrą pedagogiczną.',
+          sideContent: null,
+        },
+        children: [
+          LINKS.historiaSzkoly,
+          LINKS.patron,
+          LINKS.kadra,
+        ],
+      }
     ],
   },
 
@@ -205,9 +217,9 @@ export const MENU = [
   // Bezpośrednie linki wyświetlane na poziomie głównym menu.
   // Brak children – to strony docelowe bez zagnieżdżenia.
   {
-    ...LINKS.wydarzenia,
+    ...LINKS.artykuly,
     meta: {
-      ...LINKS.wydarzenia.meta,
+      ...LINKS.artykuly.meta,
       sideContent: null,
     },
     children: null,

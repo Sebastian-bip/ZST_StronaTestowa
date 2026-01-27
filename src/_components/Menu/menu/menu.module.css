@@ -92,7 +92,8 @@
     display: flex;
     flex-direction: column;
     gap: 56px;
-    padding-inline: 40px;
+    padding-left: 56px;
+    padding-right: 32px;
     /* border: 1px solid red; */
     min-width: 320px;
 }
@@ -219,6 +220,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    max-width: 400px;
 }
 
 /* Podświetlenie aktywnej grupy */
@@ -266,6 +268,7 @@
     margin-inline: 64px;
     margin-left: 48px;
     flex-grow: 1;
+    max-width: 640px;
 }
 
 /* Separator linii w dolnych linkach */

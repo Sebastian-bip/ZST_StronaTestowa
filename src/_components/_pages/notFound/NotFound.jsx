@@ -34,7 +34,7 @@ export default function NotFound({ children }) {
                 colorStops={["#9900ff","#8876c4","#5227FF"]}
                 blend={1}
                 amplitude={1.0}
-                speed={0.2}
+                speed={0.5}
                 />
             </div>
         </div>

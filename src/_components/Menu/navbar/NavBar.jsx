@@ -2,7 +2,7 @@
 import { Icon } from "@/_lib/Icons"
 import styles from "./navbar.module.css"
 import NavbarTitle from "./NavbarTitle"
-import NavbarUtilsPill from "./NavbarUserPill"
+import NavbarUtilsPill from "./NavbarUtilsPill"
 import Link from "next/link"
 import { useMenu } from "@/_lib/Providers/MenuContext";
 import Button from "@/_components/Buttons/Button"

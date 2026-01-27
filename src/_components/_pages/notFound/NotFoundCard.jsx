@@ -28,7 +28,7 @@ export default function NotFoundCard({ children }) {
                     <Button
                         onClick={handleGoHome}
                         content="textIcon"
-                        iconName="arrow-up-right-square"
+                        iconName="arrow-right-circle"
                         iconSize={16}
                         transparent={true}
                     >Powrót do strony głównej</Button>
@@ -37,7 +37,7 @@ export default function NotFoundCard({ children }) {
                         variant="secondary"
                         content="textIcon"
                         textSize="sm"
-                        iconName="arrow-up-right-square"
+                        iconName="arrow-right-circle"
                         iconSize={14}
                         transparent={true}
                     >W razie problemów skontaktuj się z administracją</Button>
@@ -46,7 +46,7 @@ export default function NotFoundCard({ children }) {
                         variant="secondary"
                         content="textIcon"
                         textSize="sm"
-                        iconName="arrow-up-right-square"
+                        iconName="arrow-right-circle"
                         iconSize={14}
                         transparent={true}
                     >Panel administratora</Button>}

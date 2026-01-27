@@ -52,10 +52,12 @@ export default function Menu({
                             Boolean(activeSection) ? styles.menuSectionActiveBackground : '',
                         ].join(' ')}>
                         {isOpen && <Aurora
-                                colorStops={["#9900ff","#8876c4","#5227FF"]}
+                                //colorStops={["#9900ff","#8876c4","#5227FF"]}  orginalny kolor
+                                // colorStops={["#EE92B1","#EEDDF3","#6330B4"]}
+                                colorStops={["#D9A7C7","#5B507A","#FFFCDC"]}
                                 blend={1}
                                 amplitude={1.0}
-                                speed={0.2}
+                                speed={0.4}
                                 style={{transition: 'none'}}
                             />}
                         </div>

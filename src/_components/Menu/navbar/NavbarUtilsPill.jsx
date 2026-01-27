@@ -1,8 +1,10 @@
 import Button from "@/_components/Buttons/Button";
 import { Icon } from "@/_lib/Icons";
 import styles from "./navbar.module.css"
+import { useMenu } from "@/_lib/Providers/MenuContext";
 
 export default function NavbarUtilsPill() {
+    const {isOpen} = useMenu();
 
     let User = {
         name: "Jan Kowalski",
@@ -10,10 +12,11 @@ export default function NavbarUtilsPill() {
         id: 324356435
     }; //zamienic potem na sprawdzianie czy ktos jest zalogowany
 
-    //User = null; // --- IGNORE ---
+    User = null; // --- IGNORE ---
+    if (!User && !isOpen) return null;
+    if (!User) return null;
 
-    if (!User) {return null;}
-    else{return (
+    return (
         <div className={styles.navbarPillContainer}>
             <div className={styles.navbarUtilsPill}>
                 {/* Dostepne narzedzia:
@@ -34,5 +37,5 @@ export default function NavbarUtilsPill() {
                 </Button>
             </div>
         </div>
-    );}
+    );
 }
