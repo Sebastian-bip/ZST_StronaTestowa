@@ -103,6 +103,58 @@ export default function DataBaseTestPage() {
             Wyświetlanie planów lekcji dla klas
           </p>
         </Link>
+
+        <Link 
+          href="/data-base-test/login"
+          style={{
+            display: "block",
+            padding: "2rem",
+            border: "2px solid #0ed27a",
+            borderRadius: "8px",
+            textDecoration: "none",
+            color: "#333",
+            backgroundColor: "#f8f9fa",
+            textAlign: "center",
+            boxShadow: "0 2px 4px rgba(50, 80, 30, 0.57)"
+          }}
+        >
+          <h2 style={{ 
+            fontSize: "1.5rem", 
+            marginBottom: "1rem",
+            color: "#35dc59"
+          }}>
+            Test logowania
+          </h2>
+          <p style={{ color: "#666", lineHeight: "1.6" }}>
+            Testowa strona logowania
+          </p>
+        </Link>
+
+                <Link 
+          href="/data-base-test/rejestracja"
+          style={{
+            display: "block",
+            padding: "2rem",
+            border: "2px solid #85129cdf",
+            borderRadius: "8px",
+            textDecoration: "none",
+            color: "#ffffff",
+            backgroundColor: "#818181",
+            textAlign: "center",
+            boxShadow: "0 2px 4px rgba(50, 80, 30, 0.57)"
+          }}
+        >
+          <h2 style={{ 
+            fontSize: "1.5rem", 
+            marginBottom: "1rem",
+            color: "#c73aadda"
+          }}>
+            Test tworzenia użytkownika
+          </h2>
+          <p style={{ color: "#666", lineHeight: "1.6" }}>
+            Testowa strona rejestracja
+          </p>
+        </Link>
       </div>
     </div>
   );
