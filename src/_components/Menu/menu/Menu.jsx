@@ -1,11 +1,17 @@
 
 'use client'
 import { MENU } from '@/_data/menu/menu.config'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
+import MenuSection from './MenuSection'
+import MenuGroup from './MenuGroup'
+import MenuLinks from './MenuLinks'
+import styles from './menu.module.css'
+import { Aurora } from '@/_lib/Backgrounds/Aurora'
 
-export default function Menu() {
+export default function Menu({
+    isOpen,
+}) {
     const pathname = usePathname()
     const [activeSection, setActiveSection] = useState(null)
     const [activeGroup, setActiveGroup] = useState(null)
@@ -28,66 +34,65 @@ export default function Menu() {
     useEffect(() => {
         setActiveSection(null)
         setActiveGroup(null)
-    }, [pathname])
+    }, [isOpen, pathname])
+
+
 
     // Renderowanie menu
     return (
         <>
-            {/* Główna lista sekcji */}
-            <div>
-                {MENU.map(item => (
-                    item.children && item.children.length > 0 ? (
-                        // Sekcja z podsekcjami — przycisk otwierający sekcję
-                        <button
-                            key={item.id}
-                            onClick={() => handleSectionToggle(item.id)}
-                        >
-                            {item.label}
-                        </button>
-                    ) : (
-                        // Link bez podsekcji
-                        <Link key={item.id} href={item.href || '#'}>
-                            {item.label || item.id}
-                        </Link>
-                    )
-                ))}
+            <div className={[styles.menu, 
+                isOpen ? styles.menuOpen : styles.menuClosed,
+                Boolean(activeSection) ? styles.menuSectionActive : '',
+                Boolean(activeGroup) ? styles.menuGroupActive : '',
+                ].join(' ')}>
+                <div className={styles.menuWrapper}>
+                        <div className={[
+                            styles.menuBackground,
+                            Boolean(activeSection) ? styles.menuSectionActiveBackground : '',
+                        ].join(' ')}>
+                        {isOpen && <Aurora
+                                colorStops={["#9900ff","#8876c4","#5227FF"]}
+                                blend={1}
+                                amplitude={1.0}
+                                speed={0.2}
+                                style={{transition: 'none'}}
+                            />}
+                        </div>
+                    <div className={styles.menuSections} style={{zIndex: '4', position: 'relative'}}>
+                        <div className={styles.menuSectionContainer}>
+                            <MenuSection
+                                mapItem={MENU}
+                                activeSection={activeSection}
+                                handleSectionToggle={handleSectionToggle}
+                            ></MenuSection>
+                        </div>
+                        <div className={styles.menuGroupContainer}>
+                            <MenuGroup
+                                mapItem={section}
+                                activeGroup={activeGroup}
+                                handleGroupToggle={handleGroupToggle}
+                            >
+                            </MenuGroup>
+                        </div>
+                        <div className={styles.menuLinksContainer}>
+                            <MenuLinks mapItem={group}></MenuLinks>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            {/* Podsekcje (grupy) aktywnej sekcji */}
-            {section && section.children && section.children.length > 0 && (
-                <div>
-                    {/* Lista grup w aktywnej sekcji */}
-                    {section.children.map(group => (
-                        group.children && group.children.length > 0 ? (
-                            <button key={group.id} onClick={() => handleGroupToggle(group.id)}>
-                                {group.label}
-                            </button>
-                        ) : (
-                            <Link key={group.id} href={group.href || '#'}>
-                                {group.label || group.id}
-                            </Link>
-                        )
-                    ))}
-                </div>
-            )}
 
-            {/* Podgrupy aktywnej grupy */}
-            {group && group.children && group.children.length > 0 && (
-                <div>
-                    {/* Lista podgrup w aktywnej grupie */}
-                    {group.children.map(link => (
-                        <Link key={link.id} href={link.href || '#'}>
-                            {link.label || link.id}
-                        </Link>
-                    ))}
-                </div>
-            )}
+
+
+
+
 
             {/* Aktualny stan (do testów) */}
-            <div style={{ marginTop: '1rem', fontSize: '0.9em', color: '#888' }}>
+            {/* <div style={{ marginTop: '1rem', fontSize: '0.9em', color: '#888' }}>
                 <div>Aktywna sekcja: <b>{activeSection || 'brak'}</b></div>
                 <div>Aktywna grupa: <b>{activeGroup || 'brak'}</b></div>
-            </div>
+            </div> */}
         </>
     );
 }

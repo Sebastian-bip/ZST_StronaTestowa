@@ -45,7 +45,7 @@ export const MENU = [
       ...LINKS.szkola.meta,
       // Opis wyświetlany WYŁĄCZNIE w menu (pod nagłówkiem sekcji w mega-menu)
       // Inny niż description w links.js, które opisuje samą stronę
-      menuDescription: 'Poznaj naszą szkołę, historię, kadrę i patrona',
+      menuDescription: 'Sekcja poświęcona tożsamości, tradycji i wartościom Zespołu Szkół Technicznych.',
       sideContent: null,
     },
     children: [
@@ -62,7 +62,7 @@ export const MENU = [
     ...LINKS.dokumenty,
     meta: {
       ...LINKS.dokumenty.meta,
-      menuDescription: 'Dokumenty, regulaminy i archiwum szkoły',
+      menuDescription: 'Zbiór najważniejszych dokumentów, zasad i materiałów formalnych dotyczących funkcjonowania szkoły.',
       sideContent: null,
     },
     children: [
@@ -77,7 +77,7 @@ export const MENU = [
         meta: {
           ...LINKS.regulaminy.meta,
           flags: ['subSection'],
-          menuDescription: 'Regulaminy obowiązujące w placówce',
+          menuDescription: 'Sekcja dotycząca zasad, przepisów i regulacji obowiązujących w szkole.',
           sideContent: null,
         },
         children: [
@@ -93,7 +93,7 @@ export const MENU = [
         meta: {
           ...LINKS.archiwum.meta,
           flags: ['subSection'],
-          menuDescription: 'Archiwalne materiały i zasoby ZST',
+          menuDescription: 'Archiwalne materiały i zasoby związane z historią oraz działalnością szkoły.',
           sideContent: null,
         },
         children: [
@@ -110,7 +110,7 @@ export const MENU = [
     ...LINKS.informacje,
     meta: {
       ...LINKS.informacje.meta,
-      menuDescription: 'Komunikaty, strefy dla uczniów, rodziców i nauczycieli',
+      menuDescription: 'Informacje i komunikaty dla całej społeczności szkolnej – uczniów, rodziców i nauczycieli.',
       sideContent: null,
     },
     children: [
@@ -122,7 +122,7 @@ export const MENU = [
         meta: {
           ...LINKS.strewaUcznia.meta,
           flags: ['subSection'],
-          menuDescription: 'Plany lekcji, materiały edukacyjne, wymagania',
+          menuDescription: 'Obszar przeznaczony dla uczniów – wsparcie, materiały i ważne informacje.',
           sideContent: null,
         },
         children: [
@@ -138,7 +138,7 @@ export const MENU = [
         meta: {
           ...LINKS.strewaRodzica.meta,
           flags: ['subSection'],
-          menuDescription: 'Terminy zebrań, dostępność nauczycieli, dziennik elektroniczny',
+          menuDescription: 'Strefa dla rodziców – komunikacja, wsparcie i dostęp do istotnych informacji.',
           sideContent: null,
         },
         children: [
@@ -154,7 +154,7 @@ export const MENU = [
         meta: {
           ...LINKS.strefaNauczyciela.meta,
           flags: ['subSection'],
-          menuDescription: 'Plany lekcji dla nauczycieli i sal',
+          menuDescription: 'Sekcja dla nauczycieli – narzędzia, materiały i informacje wspierające pracę dydaktyczną.',
           sideContent: null,
         },
         children: [
@@ -175,7 +175,7 @@ export const MENU = [
     ...LINKS.rekrutacja,
     meta: {
       ...LINKS.rekrutacja.meta,
-      menuDescription: 'Oferta edukacyjna, harmonogram i procedura naboru',
+      menuDescription: 'Informacje o rekrutacji, ofercie edukacyjnej i możliwościach dołączenia do szkoły.',
       sideContent: null,
     },
     children: [
@@ -187,7 +187,7 @@ export const MENU = [
         meta: {
           ...LINKS.nabor.meta,
           flags: ['subSection'],
-          menuDescription: 'Harmonogram, nabór elektroniczny, kierunki branżowe',
+          menuDescription: 'Wszystko o procesie naboru i zasadach przyjęć do szkoły.',
           sideContent: null,
         },
         children: [

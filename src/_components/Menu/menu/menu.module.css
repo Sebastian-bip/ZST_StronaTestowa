@@ -1,0 +1,308 @@
+
+.menu {
+    /* Główna belka menu (pozycjonowanie i centrowanie) */
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuClosed {
+    /* top: -100vh; */
+}
+
+
+/* Wrapper menu: tło, rozmiar, animacje otwierania/zamykania */
+.menuWrapper {
+    position: relative;
+    margin-top: 8px;
+    padding: 8px;
+    width: calc(100vw - 32px - 2 * 8px);
+    height: 0;
+    overflow: hidden;
+    border-radius: calc(34px / 2 + 8px);
+    opacity: 0;
+    backdrop-filter: blur(32px);
+    border: 1px solid transparent;
+    background-color: transparent;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Aktywne (otwarte) menu: pełna wysokość, widoczne tło */
+.menuOpen .menuWrapper {
+    margin-top: 8px;
+    width: calc(100vw - 16px - 2 * 8px);
+    height: calc(100vh - 16px - 2 * 8px);
+    opacity: 1;
+    border: 1px solid hsl(var(--primary-900-hsl)/0.2);
+    background-color: hsl(var(--primary-860-hsl)/0.9);
+    -webkit-user-select: all !important;
+    user-select: all !important;
+}
+
+/* Po wejściu w sekcję menu: pełny ekran, inne tło */
+.menuSectionActive .menuWrapper {
+    margin-top: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+    background-color: hsl(var(--primary-860-hsl)/1);
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.menuBackground{
+    transition: none !important;
+    transition: opacity .7s cubic-bezier(0.19, 1, 0.22, 1) !important;
+    width: calc(100vw - 16px);
+    height: calc(100vh - 16px);
+    position: absolute;
+    overflow: hidden;
+    top: 8px;
+    left: 8px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    border-radius: calc(34px / 2 + 8px);
+}.menuBackground *{
+    transition: opacity .7s cubic-bezier(0.19, 1, 0.22, 1) !important;
+}.menuSectionActiveBackground{
+    opacity: .6;
+}
+
+
+
+/* Kontener sekcji głównych menu (poziomy układ) */
+.menuSections {
+    display: flex;
+    padding-top: 137px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Pojedyncza sekcja menu (kolumny) */
+.menuSectionContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+    padding-inline: 40px;
+    /* border: 1px solid red; */
+    min-width: 320px;
+}
+
+
+
+
+/* Przycisk sekcji i grupy (duże, klikalne) */
+.menuSectionButton,
+.menuGroupButton {
+    background: none;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Linki w menu (różne poziomy) */
+.menuSectionLink,
+.menuGroupLink,
+.menuLinksLink,
+.menuGroupHeaderLink,
+.menuLinksHeaderLink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    &:hover {
+        gap: 12px;
+    }
+}
+
+/* Główne linki/przyciski sekcji (duża czcionka) */
+.menuSectionButton,
+.menuSectionLink {
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--primary-230);
+}
+
+/* Podświetlenie aktywnej sekcji */
+.menuSectionActive .menuSectionButton,
+.menuSectionActive .menuSectionLink {
+    color: var(--primary-360);
+}
+.menuSectionActive .menuSectionLink:hover .menuSectionLinkIcon {
+    fill: var(--primary-360);
+}
+
+/* Aktywny przycisk sekcji (wcięcie, pogrubienie) */
+.menuSectionButtonActive {
+    margin-left: 16px;
+    font-weight: 600;
+    color: var(--primary-230) !important;
+    text-shadow:
+        0 0 2px var(--primary-360, #fff),
+        0 0 4px var(--primary-360, #fff),
+        0 0 8px var(--primary-360, #fff);
+    opacity: 0.92;
+    /* font-variation-settings: "opsz" 32,"YTUC" 712; */
+}
+.menuSectionButtonActive .menuSectionButtonIcon {
+    fill: var(--primary-230);
+}
+
+/* Ikony sekcji (domyślnie niewidoczne, pojawiają się po hover) */
+.menuSectionLinkIcon,
+.menuSectionButtonIcon {
+    fill: transparent;
+}
+.menuSectionLink:hover .menuSectionLinkIcon,
+.menuSectionButton:hover .menuSectionButtonIcon {
+    fill: var(--primary-260);
+}
+
+
+
+.menuGroupHeader, .menuLinksHeader{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    gap: 16px;
+    margin-left: 4px;
+}
+.menuGroupHeaderDescription, .menuLinksHeaderDescription{
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--primary-200);
+    margin-bottom: 4px;
+    min-width: 300px;
+    max-width: 380px;
+    text-wrap: wrap;
+    white-space-collapse: break-spaces;
+}
+.menuGroupHeaderLink, .menuLinksHeaderLink{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--primary-230);
+}
+.menuGroupHeaderLinkIcon, .menuLinksHeaderLinkIcon{
+    fill: var(--primary-360);
+}.menuGroupHeaderLink:hover .menuGroupHeaderLinkIcon,
+.menuLinksHeaderLink:hover .menuLinksHeaderLinkIcon{
+    fill: var(--primary-230);
+}
+.menuGroupHeaderDivider, .menuLinksHeaderDivider {
+    width: 100%;
+    height: 2px;
+    background-color: hsl(var(--primary-300-hsl)/0.1);
+}
+.menuLinksHeader{
+    margin-left: 16px;
+}
+.menuLinksHeaderDescription{
+    max-width: 440px;
+}
+
+
+/* Kontener podgrupy menu (podsekcje) */
+.menuGroupContainer {
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Podświetlenie aktywnej grupy */
+.menuGroupActive .menuGroupButton,
+.menuGroupActive .menuGroupLink {
+    color: var(--primary-360);
+}
+.menuGroupActive .menuGroupLink:hover .menuGroupLinkIcon {
+    fill: var(--primary-360);
+}
+
+/* Przycisk/link podgrupy (mniejsza czcionka) */
+.menuGroupButton,
+.menuGroupLink {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--primary-230);
+}
+
+/* Ikony podgrup i sekcji (kolor domyślny) */
+.menuGroupButtonIcon,
+.menuSectionButtonIcon {
+    fill: var(--primary-360);
+}
+
+/* Aktywny przycisk podgrupy (pogrubienie, kolor) */
+.menuGroupButtonActive {
+    font-weight: 600;
+    color: var(--primary-230) !important;
+}
+.menuGroupButtonActive .menuGroupButtonIcon,
+.menuGroupButtonActive .menuSectionButtonIcon {
+    fill: var(--primary-260);
+}
+
+
+
+
+
+
+/* Kontener linków na dole menu (np. kontakt, wyloguj) */
+.menuLinksContainer {
+    display: flex;
+    flex-direction: column;
+    margin-inline: 64px;
+    margin-left: 48px;
+    flex-grow: 1;
+}
+
+/* Separator linii w dolnych linkach */
+.menuLinksDivider {
+    width: 100%;
+    height: 2px;
+    background-color: hsl(var(--primary-300-hsl)/0.03);
+    margin-block: 2px;
+}
+
+/* Lista linków dolnych (kolumnowo) */
+.menuLinksListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* Pojedynczy link dolny (np. kontakt, wyloguj) */
+.menuLinksLink {
+    padding-left: 16px;
+    padding-right: 32px;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--primary-230);
+}
+
+/* Ikony przy linkach dolnych i grupowych */
+.menuLinksLinkIcon,
+.menuGroupLinkIcon {
+    fill: hsl(var(--primary-230-hsl)/0.2);
+}
+.menuLinksLink:hover .menuLinksLinkIcon,
+.menuGroupLink:hover .menuGroupLinkIcon {
+    fill: var(--primary-160) !important;
+}
+
+.menuLinksLink:hover {
+    color: var(--primary-160);
+}

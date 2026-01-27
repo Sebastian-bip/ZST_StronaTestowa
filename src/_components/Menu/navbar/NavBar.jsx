@@ -34,12 +34,12 @@ export default function NavBar() {
                     <Button
                         variant="navbar"
                         content="textIcon"
-                        iconName='list'
+                        iconName={isOpen ? 'x-circle' : 'list'}
                         size="custom"
                         onClick={toggleMenu}
                         className={styles.navbarMenuBtn}
                     >
-                        Menu
+                        {isOpen ? 'Zamknij' : 'Menu'}
                     </Button>
                 </div>
             </div>

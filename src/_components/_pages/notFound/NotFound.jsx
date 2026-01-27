@@ -31,7 +31,7 @@ export default function NotFound({ children }) {
             <div style={{ width: '100vw', height: '100vh', position: 'relative', overflow: 'hidden', borderRadius: '24px'}}>
                 <Aurora
                 // colorStops={["#9900ff","#B19EEF","#5227FF"]}
-                colorStops={["#9900ff","#B19EEF","#5227FF"]}
+                colorStops={["#9900ff","#8876c4","#5227FF"]}
                 blend={1}
                 amplitude={1.0}
                 speed={0.2}

@@ -13,9 +13,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  /* padding: 2rem; */
   /* bardzo ciemne tło korzystające z variantu primary-900/860 */
   background: radial-gradient(1200px 600px at 10% 10%, color-mix(in srgb, var(--primary-900) 86%, black) 0%, color-mix(in srgb, var(--primary-860) 86%, black) 40%, color-mix(in srgb, var(--primary-900) 92%, black) 100%);
+  background: #833AB4;
+  background: linear-gradient(135deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
 
 .card {

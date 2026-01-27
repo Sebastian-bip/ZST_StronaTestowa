@@ -1,4 +1,6 @@
 .mainBlock{
     font-size: 48px;
     color: white;
+background: #833AB4;
+background: linear-gradient(135deg, rgba(131, 58, 180, 0.5) 0%, rgba(253, 29, 29, 0.5) 50%, rgba(252, 176, 69, 0.5) 100%);
 }
