@@ -134,6 +134,7 @@
     font-size: 48px;
     font-weight: 400;
     color: var(--primary-230);
+    font-variation-settings: 'opsz' 48;
 }
 
 /* Podświetlenie aktywnej sekcji */

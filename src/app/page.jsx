@@ -1,22 +1,16 @@
-import Image from "next/image";
 import "./page.css";
-import Link from "next/link";
-import Testforpage from "./Testforpage";
+import Home from "@/_components/_pages/home";
 
 
-export default function Home() {
+export default function Page() {
 
 
 
   return (
-    <div className="mainBlock" style={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh', gap: '20px'}}>
-        Strona główna
-          <Link href="/test">test</Link>
-          {/* <Link href="/contact">contact (bardzo legit i napewno dziala)</Link> */}
-          <Testforpage/>
-          <Link href="/test-menu">Test Menu</Link>
-    </div>
-  );
+    <>
+      <Home/>
+    </>
+  )
 }
   
   

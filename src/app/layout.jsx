@@ -19,7 +19,11 @@ export const metadata = {
 };
 
 const roboto = Roboto({subsets: ['latin'],variable: '--font-roboto',})
-const robotoFlex = Roboto_Flex({subsets: ['latin'],variable: '--font-roboto-flex',})
+const robotoFlex = Roboto_Flex({
+  subsets: ['latin'],
+  variable: '--font-roboto-flex',
+  axes: ['wght', 'wdth', 'GRAD', 'opsz'],
+})
 const robotoMono = Roboto_Mono({subsets: ['latin'],variable: '--font-roboto-mono',})
 const jetBrainsMono = JetBrains_Mono({subsets: ['latin'],variable: '--font-jetBrainsMono',})
 
