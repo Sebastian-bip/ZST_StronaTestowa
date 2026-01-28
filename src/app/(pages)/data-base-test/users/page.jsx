@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getAllUsersWithRoles } from "@/app/api/lib/users";
 
 export default async function UsersPage() {

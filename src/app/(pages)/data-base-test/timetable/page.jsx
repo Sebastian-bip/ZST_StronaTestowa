@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { getAllClasses } from "@/app/api/lib/classes";
 import Link from "next/link";
 

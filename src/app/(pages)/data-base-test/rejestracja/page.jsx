@@ -21,40 +21,33 @@ export default function CreateUserPage() {
 
   // ✅ 2. FUNKCJE DOPIERO PO STATE
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
+  e.preventDefault();
+  setLoading(true);
+  setError(null);
 
-    try {
-      const res = await fetch("/api/users", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+  try {
+    const res = await fetch("/api/urzytkownicy", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
 
-      const data = await res.json();
+    const text = await res.text();
+    const data = text ? JSON.parse(text) : null;
 
-      if (!res.ok) {
-        throw new Error(data.error || "Błąd");
-      }
-
-      setSuccess(true);
-      setForm({
-        first_name: "",
-        last_name: "",
-        email: "",
-        password: "",
-        date_of_birth: "",
-        phone: "",
-        role_id: 1,
-      });
-
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
+    if (!res.ok) {
+      throw new Error(data?.error || "Błąd");
     }
-  };
+
+    setSuccess(true);
+
+  } catch (err) {
+    setError(err.message);
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div style={{ maxWidth: 500 }}>

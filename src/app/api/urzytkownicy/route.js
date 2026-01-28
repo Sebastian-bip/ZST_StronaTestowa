@@ -7,28 +7,17 @@ export async function POST(req) {
 
     await createUser(body);
 
-    return NextResponse.json({ success: true }, { status: 201 });
+    return NextResponse.json(
+      { success: true },
+      { status: 201 }
+    );
+
   } catch (err) {
-    console.error(err);
-
-    if (err.message === "EMAIL_EXISTS") {
-      return NextResponse.json(
-        { error: "Email zajęty" },
-        { status: 409 }
-      );
-    }
-
-    if (err.message === "MISSING_REQUIRED_FIELDS") {
-      return NextResponse.json(
-        { error: "Brakuje wymaganych pól" },
-        { status: 400 }
-      );
-    }
+    console.error("CREATE USER ERROR:", err);
 
     return NextResponse.json(
-      { error: "Błąd serwera" },
+      { error: err.message || "Server error" },
       { status: 500 }
     );
   }
 }
-
