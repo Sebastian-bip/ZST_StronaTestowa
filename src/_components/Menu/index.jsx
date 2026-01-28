@@ -8,6 +8,8 @@ export default function Navigation() {
 
     const { isOpen, toggleMenu, closeMenu } = useMenu()
 
+    
+
     return (
         <>
         <NavBar></NavBar>

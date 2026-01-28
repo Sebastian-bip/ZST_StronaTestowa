@@ -5,7 +5,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100vw;
+    width: var(--deviceWidth);
     z-index: 9998;
     display: flex;
     justify-content: center;
@@ -22,7 +22,7 @@
     position: relative;
     margin-top: 8px;
     padding: 8px;
-    width: calc(100vw - 32px - 2 * 8px);
+    width: calc(var(--deviceWidth) - 32px - 2 * 8px);
     height: 0;
     overflow: hidden;
     border-radius: calc(34px / 2 + 8px);
@@ -37,7 +37,7 @@
 /* Aktywne (otwarte) menu: pełna wysokość, widoczne tło */
 .menuOpen .menuWrapper {
     margin-top: 8px;
-    width: calc(100vw - 16px - 2 * 8px);
+    width: calc(var(--deviceWidth) - 16px - 2 * 8px);
     height: calc(100vh - 16px - 2 * 8px);
     opacity: 1;
     border: 1px solid hsl(var(--primary-900-hsl)/0.2);
@@ -49,7 +49,7 @@
 /* Po wejściu w sekcję menu: pełny ekran, inne tło */
 .menuSectionActive .menuWrapper {
     margin-top: 0;
-    width: 100vw;
+    width: var(--deviceWidth);
     height: 100vh;
     border-radius: 0;
     border: none;

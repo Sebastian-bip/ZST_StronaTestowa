@@ -9,29 +9,87 @@ a, abbr, acronym, address, applet, big, blockquote, body, button, caption, cite,
     font-size: 100%;
     vertical-align: baseline;
 }
-
 *{
     transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
+ }
+ /*
+:root{
+    --scrollbar-width: 12px;
+} */
+/* --- STYL SCROLLBARA (Chrome, Edge, Safari) --- */
+/* Szerokość pionowego scrollbara */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
 }
+
+/* Tło toru scrollbara */
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track:horizontal {
+    background: transparent;
+    border-radius: 8px;
+}::-webkit-scrollbar-track{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/* Uchwyt scrollbara */
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:horizontal {
+    background: hsl(var(--primary-160-hsl)/ 0.6);
+    border-radius: 8px;
+    border: 2px solid transparent;
+    width: 8px;
+    background-clip: content-box;
+}
+
+/* Uchwyt scrollbara po najechaniu */
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background: var(--primary-160, #888888);
+}
+
+/* Sam "uchwyt" scrollbara */
+::-webkit-scrollbar-thumb {
+    min-height: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}::-webkit-scrollbar-thumb:horizontal{
+    min-width: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+
+
+/* --- STYL SCROLLBARA (Firefox) --- */
+/* Szerokość i kolor scrollbara w Firefox */
+/* * {
+    scrollbar-width: thin; 
+    scrollbar-color: var(--primary-120, #b0b0b0) var(--background-page-primary, #f0f0f0); 
+} */
+
 html{
     scroll-behavior: smooth;
     background-color: var(--background-page-primary);
 }
 body{
     background-color: var(--background-page-primary);
-    font-family: "Roboto Flex";
+    font-family: "Roboto";
     letter-spacing: 1.2;
 
 }
 
+
+
 .theme-light ::selection, .theme-light ::-moz-selection {
-    background: #000000;
-    color: rgb(255, 255, 255);
+    background: var(--primary-900);
+    color: var(--primary-160);
     text-shadow: none;
 }
 
 .theme-dark ::selection, .theme-dark ::-moz-selection {
-    background: #ffffff;
-    color: rgb(0, 0, 0);
+    background: var(--primary-160);
+    color: var(--primary-900);
     text-shadow: none;
 }

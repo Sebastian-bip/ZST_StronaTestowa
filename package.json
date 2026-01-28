@@ -8,7 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@libsql/client": "^0.15.15",
+    "gsap": "^3.14.2",
     "next": "^16.1.5",
     "ogl": "^1.0.11",
     "react": "19.2.3",

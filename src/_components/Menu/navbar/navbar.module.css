@@ -3,7 +3,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: var(--deviceWidth);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,7 @@
     /* border: 1px solid rgb(255, 0, 0); border-radius: 4px; */
     display: flex;
     justify-content: space-between;
-    width: calc(100% - 16px );
+    width: calc(var(--deviceWidth) - 16px );
     max-width: 1920px;
     gap: 8px;
     
@@ -46,8 +46,8 @@
     backdrop-filter: blur(32px);
     border-radius: 32px; */
 }.navbarMenuOpen .navbarWrapper{
-    width: calc(100% -  2 * 16px );
-    max-width: calc(100% -  2 * 16px );
+    width: calc(var(--deviceWidth) -  2 * 16px );
+    max-width: calc(var(--deviceWidth) -  2 * 16px );
     
     margin-top: 16px;
 }

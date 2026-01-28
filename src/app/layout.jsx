@@ -3,9 +3,8 @@ import "./core.css"
 import "./globals.css";
 import { Providers } from "@/_lib/Providers";
 import {Roboto,Roboto_Flex,Roboto_Mono,JetBrains_Mono,} from 'next/font/google'
-
-
-
+import Footer from "@/_components/Footer";
+import ScrollController from "@/_lib/scrollControler";
 
 export const metadata = {
   title: {
@@ -28,19 +27,17 @@ const robotoMono = Roboto_Mono({subsets: ['latin'],variable: '--font-roboto-mono
 const jetBrainsMono = JetBrains_Mono({subsets: ['latin'],variable: '--font-jetBrainsMono',})
 
 export default function RootLayout({ children }) {
-
-
-//  Dodajemy suppressHydrationWarning do <html>, 
-//  ponieważ nasz skrypt będzie zmieniał klasy/atrybuty 
-//  zaraz po załadowaniu strony.
   return (
     <html lang="pl">
       <body suppressHydrationWarning
         className={`${roboto.variable}${robotoFlex.variable}${robotoMono.variable}`}
+        style={{transition: 'none', overflowX: 'hidden' }}
       >
+        <ScrollController/>
         <Providers>
           <Menu/>
           {children}
+          <Footer/>
         </Providers>
       </body>
     </html>

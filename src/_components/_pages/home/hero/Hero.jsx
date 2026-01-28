@@ -1,8 +1,10 @@
+
 import styles from './hero.module.css';
 import VideoBg from './VideoBg';
 
-export default function Hero() {
+import HeroTextAni from './HeroTextAni';
 
+export default function Hero() {
 
     return (
         <>
@@ -16,34 +18,22 @@ export default function Hero() {
                             <div className={styles.heroContentContainer}>
                                 <img src="/LOGO.png" alt="ZST logo" className={styles.heroLogoZST} />
                                 <div className={styles.heroTextContainer}>
-                                    <div className={styles.heroTitle}>
+                                    <HeroTextAni className={styles.heroTitle}>
                                         Zespół Szkół Technicznych<br />
                                         im. 10 Pułku Piechoty<br />
                                         w Łowiczu
-                                    </div>
+                                    </HeroTextAni>
                                     <div className={styles.heroSubtitle}>
-                                        Tradycja, nowoczesność i techniczna przyszłość w jednym miejscu
+                                        <HeroTextAni>
+                                            Tradycja, nowoczesność i techniczna przyszłość w jednym miejscu
+                                        </HeroTextAni>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                    {/* <div className={styles.heroLogos}>
-                        <img src="/LOGO.png" alt="ZST logo" className={styles.heroLogoZST} />
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Zespół Szkół Technicznych<br />
-                        im. 10 Pułku Piechoty<br />
-                        w Łowiczu
-                    </h1>
-                    <div className={styles.heroSubtitle}>
-                        Tradycja, nowoczesność i techniczna przyszłość w jednym miejscu
-                    </div> 
-                    </div>*/}
-                
             </section>
         </>
-    )
+    );
 }
