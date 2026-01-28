@@ -138,8 +138,8 @@ export default function DataBaseTestPage() {
             border: "2px solid #85129cdf",
             borderRadius: "8px",
             textDecoration: "none",
-            color: "#ffffff",
-            backgroundColor: "#818181",
+            color: "#443f32",
+            backgroundColor: "#ffffff",
             textAlign: "center",
             boxShadow: "0 2px 4px rgba(50, 80, 30, 0.57)"
           }}
@@ -153,6 +153,32 @@ export default function DataBaseTestPage() {
           </h2>
           <p style={{ color: "#666", lineHeight: "1.6" }}>
             Testowa strona rejestracja
+          </p>
+        </Link>
+
+        <Link 
+          href="/data-base-test/allArticles"
+          style={{
+            display: "block",
+            padding: "2rem",
+            border: "2px solid #0a1fdd",
+            borderRadius: "8px",
+            textDecoration: "none",
+            color: "#686462",
+            backgroundColor: "#f8f9fa",
+            textAlign: "center",
+            boxShadow: "0 2px 4px rgba(113, 34, 218, 0.1)"
+          }}
+        >
+          <h2 style={{ 
+            fontSize: "1.5rem", 
+            marginBottom: "1rem",
+            color: "#0066cc"
+          }}>
+            📰 Ostatnie 24 artykuły
+          </h2>
+          <p style={{ color: "#666", lineHeight: "1.6" }}>
+            Przeglądaj wszystkie artykuły z naszej bazy danych
           </p>
         </Link>
       </div>

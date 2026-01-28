@@ -1,7 +1,7 @@
 import { db } from "@/app/api/lib/db";
 
 // Ta funkcja zwraca 4 najnowsze artykuły
-export async function getLatestArticleTitles(limit = 4) {
+export async function getLatestArticleTitles(limit = 24) {
   const result = await db.execute({
     sql: `
       SELECT id, title, created_at
