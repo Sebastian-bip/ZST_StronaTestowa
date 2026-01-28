@@ -28,7 +28,6 @@ export async function getAllUsersWithRoles() {
 
 
 /* funkcja do tworzenia użytkowników */
-
 export async function createUser({
   first_name,
   last_name,
@@ -36,12 +35,13 @@ export async function createUser({
   password,
   date_of_birth,
   phone,
-  role_id,
+  role, // 👈 STRING: "admin" | "teacher"
 }) {
-  if (!date_of_birth || !role_id) {
+  if (!email || !password || !date_of_birth || !role) {
     throw new Error("MISSING_REQUIRED_FIELDS");
   }
 
+  // 🔍 sprawdź czy email istnieje
   const exists = await db.execute({
     sql: "SELECT id FROM users WHERE email = ?",
     args: [email],
@@ -51,9 +51,10 @@ export async function createUser({
     throw new Error("EMAIL_EXISTS");
   }
 
+  // 🔐 hash hasła
   const password_hash = await bcrypt.hash(password, 12);
 
-  // 1️⃣ insert użytkownika
+  // 1️⃣ dodaj użytkownika
   const res = await db.execute({
     sql: `
       INSERT INTO users (
@@ -79,13 +80,25 @@ export async function createUser({
 
   const userId = res.rows[0].id;
 
-  // 2️⃣ przypisanie roli
+  // 2️⃣ znajdź ID roli po nazwie
+  const roleRes = await db.execute({
+    sql: `SELECT id FROM roles WHERE name = ?`,
+    args: [role],
+  });
+
+  if (roleRes.rows.length === 0) {
+    throw new Error("INVALID_ROLE");
+  }
+
+  const roleId = roleRes.rows[0].id;
+
+  // 3️⃣ przypisz rolę
   await db.execute({
     sql: `
       INSERT INTO user_roles (user_id, role_id)
       VALUES (?, ?)
     `,
-    args: [userId, role_id],
+    args: [userId, roleId],
   });
 }
 
